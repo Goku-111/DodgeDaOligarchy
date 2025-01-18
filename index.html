@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodge Da Oligarchy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>Dodge Da Oligarchy</h1>
+    <p id="instructions">Use arrow keys to dodge the Shiba heads and survive as long as possible!</p>
+    <div id="game-area">
+      <div id="player"></div>
+      <div id="shiba"></div>
+    </div>
+    <p id="score">Score: 0</p>
+    <button id="restart-btn" onclick="restartGame()">Restart</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+Style
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#game-area {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-color: #222;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Player and Shiba */
+#player, #shiba {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#player {
+  background-color: #4caf50;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#shiba {
+  background-color: #e91e63;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#score {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  background-color: #ff4081;
+}
